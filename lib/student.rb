@@ -20,8 +20,8 @@ class Student
 
 
 # the method below add additional info like github link, to each student, from what was scraped off their profile page
-  def add_student_attributes(return_value_of_indiv_student_pages)
-    return_value_of_indiv_student_pages.each {|key, value| self.send(("#{key}="), value)}
+  def add_student_attributes(return_value_of_scraped_student_pages)
+    return_value_of_scraped_student_pages.each {|key, value| self.send(("#{key}="), value)}
   end
 
   def self.all
